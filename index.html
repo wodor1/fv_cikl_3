@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Házi feladat: függvények, ciklusok</h2>
+    <b>
+      3. Feladat: Az előző függvényt bővítsd ki úgy hogy üzenetet dobjon ha a
+      tömb egyik eleme nem szám, és azt ne vegye figyelembe, de így is
+      összegezze a többi number típusú elemet, es irja ki az eredmenyt. const
+      nums = [ 'a', 4, 2, 2, 1, 1]; // 10
+    </b>
+
+    <!-- ez a HTML adatkiíratáshoz kell -->
+    <p style="background-color: yellowgreen" id="data"></p>
+
+    <script>
+      const nums = ["a", 4, 2, 2, 1, 1];
+      let sum = 0;
+
+      // ez a ciklus végigmegy a tömb elemein, és egy változóban tárolja az összegüket
+      for (i = 0; i < nums.length; i++) {
+        if (typeof nums[i] === "number") {
+          sum += nums[i];
+        }
+      }
+
+      console.log("const nums = " + "[" + nums + "]" + " // " + sum);
+      document.getElementById("data").innerHTML =
+        "const nums = " + "[" + nums + "]" + " // " + sum;
+    </script>
+  </body>
+</html>
